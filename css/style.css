@@ -2,6 +2,7 @@ body {
     /* background-image: url("/img/lowresberlin.png");
     background-repeat: no-repeat;
     background-size:  cover; */
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color:#000000;
     color: #ffffff;
     width: 100%;
@@ -11,6 +12,20 @@ body {
     height: 50vh;
     margin-bottom: 10px;
     padding-bottom: 150px;
+    position: relative;
+    z-index: -10;
+}
+
+.banner-title{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.banner-subtitle{
+    padding-left: 20px;
+    margin-top: -25px;
 }
 
 .grid-title{
