@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="css/style.css">
+
+        </head>
+<body>
+        
+    <div class="main-container">
+        <nav>
+                <ul class="top-nav" id="my-top-nav">
+                    <li><a href="index.html"></a></li>
+                    <li><a class="active" href="#home">home</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li class="icon"><a href="javascript:void(0);" style="font-size:2.25em;" onclick="myFunction()">☰</a></li>
+                </ul>
+        </nav>
+
+       <div class="top-banner">
+                <img src="/img/lowresberlin.png">
+         </div>
+
+        <div class="content-container">     
+            <div class="content-thumbnail">
+            <h3>Augmented Reality Cargo</h3>
+            <img src="/thumbnails/arc.gif">
+            </div><!--End of Thumbnail-->
+        </div> <!--Content Column END-->
+
+        <div class="content-container">
+                <div class="content-thumbnail">
+                 <h3>Digital Dependency</h3>
+                <img src="/thumbnails/dependency.gif">
+                </div><!--End of Thumbnail-->
+            </div> <!--Content Column END-->
+
+     </div>  <!-- End of Main Container-->
+
+
+      <script>
+            function myFunction() {
+                var x = document.getElementById("my-top-nav");
+                if (x.className === "top-nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "top-nav";
+                }
+            }
+        </script>
+
+
+</body>
+</html>
