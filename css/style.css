@@ -7,6 +7,15 @@ body {
     width: 100%;
     margin: 0;
 }
+.top-banner {
+    height: 50vh;
+    margin-bottom: 10px;
+    padding-bottom: 150px;
+}
+
+.grid-title{
+    margin:10%;
+}
 ul.top-nav {
     list-style-type: none;
     margin:0;
@@ -109,13 +118,21 @@ footer{
 /* tablet */
 
 @media only screen and (min-width:681px) and (max-width:1024px){
-   
+    .top-banner {
+        height: 30vh;
+        margin-bottom: 10px;
+        padding-bottom: 150px;
+    }
 }
 
 /* desktop */
 
 @media only screen and (min-width:1025px){
-    
+    .top-banner {
+        height: 20vh;
+        margin-bottom: 10px;
+        padding-bottom: 150px;
+    }
 }
 
 
