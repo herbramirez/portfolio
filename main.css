@@ -1,48 +1,81 @@
 html {
     font-family: 'Overpass', sans-serif;
     font-style: italic;
+    font-size: 16px;
     margin: 0;
+    width: 100vw;
 }
 
 
 
 body {
-    background-color: #d41919;
+    background-color: rgb(12, 12, 12);
     margin: auto;
     width: 100vw;
     z-index: 0;
-   
+    overflow: hidden;
+}
+
+.main-container {
+    margin: 0;
+    width: 100%;
+    
 }
 
 .header {
     width: 100%;
     margin: 0;
-    background-color: antiquewhite;
+    top: 0;
+    overflow: hidden;
+    position:absolute
+}
+.header-content {
+    display: grid;
+ 
+    padding: 10px;
+    padding-top: 20px;
+    grid-template-columns: 1fr auto;
+
+
 }
 
 .breadcrumb {
     margin: 0;
     padding: 0;
-    width: auto;
-    height: auto;
-    background-color:aqua;
+    display: flex;
+    
 }
 
+.col-span-4{
+    position: relative;
+}
+
+.col-span-2 {
+    position: relative;
+}
+
+
+.link {
+    margin-left: 1rem;
+}
+
+
+
 #title {
-   margin-top: 200px;
-   margin-left: 100px;
-   width: 300px;
+   margin-top: 0;
+   width: auto;
     height: auto;
     position:absolute; 
     z-index: 1;
-    color: rgb(171, 24, 24);
+    color: rgb(246, 241, 245);
+    mix-blend-mode:difference;
 
 }
 
 .main-container{
     width: 90vw;
     height: 500px;
-    background-color: rgb(255, 255, 255);
+  
     margin: auto;
     margin-top: 10%;
 }
@@ -51,10 +84,25 @@ body {
 h1 {
     padding: 0px;
     margin: 0;
-    font-size: 40pt;
+    font-size: 8rem;
     font-weight: 900;
    
 }
+
+.videoPlayer {
+    padding:56.25% 0 0 0;
+    position:relative;
+}
+
+iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 500px;
+    opacity:50;
+}
+
 
 .overlay {
     margin-left: 100px;
