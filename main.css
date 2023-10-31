@@ -3,13 +3,12 @@ html {
     font-style: italic;
     font-size: 16px;
     margin: 0;
-    width: 100vw;
+    background-color: black;
 }
 
 
 
 body {
-    background-color: rgb(12, 12, 12);
     margin: auto;
     width: 100vw;
     z-index: 0;
@@ -17,25 +16,34 @@ body {
     color: white;
 }
 
-.main-container {
-    margin: 0;
-    width: 100%;
-    
+.gallery-container{
+    width: 90vw;
+    height: 500px;
+    margin: auto;
+    margin-top: 10vh;
 }
+
 
 .gallery-content {
     padding-top: 150px;
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.gallery-row {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+.gallery-content > * {
+    display: flex;
+    gap:1rem;    
 }
+
+
+.projectLink {
+    flex: 1;
+
+}
+
 
 .header {
     width: 100%;
@@ -45,10 +53,10 @@ body {
     position:absolute
 }
 .header-content {
-    display: grid;
-  padding: 30px;
-    padding-top: 20px;
-    grid-template-columns: 1fr auto;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 
 
 }
@@ -62,20 +70,8 @@ a {
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 1rem;
     
-}
-
-.col-span-4{
-    position: relative;
-}
-
-.col-span-2 {
-    position: relative;
-}
-
-
-.link {
-    margin-left: 1rem;
 }
 
 
@@ -89,14 +85,6 @@ a {
     color: rgb(246, 241, 245);
     mix-blend-mode:difference;
 
-}
-
-.main-container{
-    width: 90vw;
-    height: 500px;
-  
-    margin: auto;
-    margin-top: 10%;
 }
 
 
@@ -160,4 +148,32 @@ iframe {
     position: absolute;
     z-index: 2;
     mix-blend-mode:hard-light;
+}
+
+@media (max-width:478px)
+{
+
+    .gallery-content > * {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+  
+        gap:1rem;    
+    }
+
+    .header-content {
+        background-color: yellowgreen;
+    
+    }
+    .breadcrumb {
+        background-color: violet;
+        display: none;
+    }
+
+    .titleContainer > * {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0;
+    }
+
 }
