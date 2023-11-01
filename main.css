@@ -52,12 +52,15 @@ body {
     overflow: hidden;
     position:absolute;
     z-index: 5;
+    display: flex;
+    justify-content: center;
 }
 .header-content {
+    width: 90vw;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    font-size: 1.1rem;
+    padding: 1.1rem 0 1.1rem 0;
+    font-size: 1.5rem;
 
 
 }
