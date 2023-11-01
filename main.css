@@ -1,6 +1,8 @@
 html {
-    font-family: 'Overpass', sans-serif;
-    font-style: italic;
+   /* font-family: 'Overpass', sans-serif; */
+   
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Teko', sans-serif;
     font-size: 16px;
     margin: 0;
     background-color: black;
@@ -16,11 +18,9 @@ body {
     color: white;
 }
 
-.gallery-container{
-    width: 90vw;
-    height: 500px;
-    margin: auto;
-    margin-top: 10vh;
+.main-container{
+    max-width: 90vw;
+    margin:10vh auto 10vh auto;
 }
 
 
@@ -50,13 +50,17 @@ body {
     margin: 0;
     top: 0;
     overflow: hidden;
-    position:absolute
+    position:absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
 }
 .header-content {
-    background-color: aqua;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1.1rem 0 1.1rem 0;
+    font-size: 1.5rem;
 
 
 }
@@ -77,9 +81,6 @@ a {
 
 
 #title {
-   margin-top: 0;
-   width: auto;
-    height: auto;
     position:absolute; 
     z-index: 1;
     color: rgb(246, 241, 245);
@@ -95,8 +96,13 @@ h1 {
     font-weight: 900;
    
 }
-
+/* Summary Content */
 .summary-content {
+    padding-top: 50px;
+    display: flex;
+}
+
+.summary-block {
     padding-top: 150px;
     display: flex;
 }
@@ -107,29 +113,37 @@ h1 {
     margin: 20px;
     width: 40%;
     font: white;
-   
-}
+   }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-.thumbnail-right {
-    background-color: rgb(255, 255, 255);
-    padding: 10px 10px 10px 10px;
-    margin: 20px;
+.summary-right {
     width: 40%;
     font: white;
     overflow: hidden;
-   
+   }
+
+/* Summary Content END */
+
+/* Reel Page*/
+
+.content-block {
+    background-color: aqua;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Content */
+   img {
+    max-width: 100%;
+    height: auto;
 }
 
 .videoPlayer {
-    padding:56.25% 0 0 0;
-    position:relative;
+    display: flex;
 }
 
 iframe {
+    padding-top: 250px;
     position:absolute;
     top:0;
     left:0;
@@ -137,6 +151,8 @@ iframe {
     height: 500px;
     opacity:50;
 }
+
+/* Media Content End */
 
 
 .overlay {
@@ -150,14 +166,36 @@ iframe {
     mix-blend-mode:hard-light;
 }
 
-@media (max-width:478px)
+ /* Big screen Media queries */
+@media screen and (min-width: 1400px) {
+    .main-container {
+      width: 1370px;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+    .main-container {
+      width: 1370px;
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    .main-container {
+      width: 1670px;
+    }
+  }
+  /* Big screen Media queries End */
+
+
+  /* Tabloid Media Query */
+@media (max-width:810px)
 {
+    .gallery-content {
+        padding-top: 4rem;
+    }
 
     .gallery-content > * {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
-  
         gap:1rem;    
     }
 
@@ -171,9 +209,106 @@ iframe {
     }
 
     .titleContainer > * {
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 0;
         margin: 0;
     }
+
+    /* Summary Content Begins*/
+    .summary-content {
+    display: flex;
+    }
+
+    .summary-block {
+    display: flex;
+    }
+
+    .summary-left {
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+    width: 40%;
+    font: white;
+   }
+
+    .summary-right {
+  
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+    width: 40%;
+    font: white;
+    overflow: hidden;
+   }
+   /* Summary Content */
+
+/* Tabloid Media END */
+
+
+}
+
+ /* Tabloid Media Query END */
+
+@media (max-width:478px)
+{
+    .main-container {
+        margin: 8vh auto 8vh auto;
+     
+        
+    }
+    .gallery-content {
+        padding-top: 3rem;
+    }
+    .gallery-content > * {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap:0.1rem;    
+    
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+    .header-content {
+        background-color: yellowgreen;
+       
+    
+    }
+    .breadcrumb {
+       
+        display: none;
+    }
+
+    .titleContainer > * {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+     
+    }
+
+      /* Summary Content Begins*/
+      .summary-content {
+        width: 90vw;
+        display: flex;
+        }
+    
+        .summary-block {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        }
+    
+        .summary-left {    
+        font: white;
+        width: auto;
+       }
+    
+        .summary-right {
+        width: 90vw;;
+        font: white;
+        overflow: hidden;
+       }
+       /* Summary Content */
 
 }
