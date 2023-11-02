@@ -41,9 +41,21 @@ body {
 
 .projectLink {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
 }
 
+.projectLink {
+    align-self: center;
+}
+.projectName  {
+    display: none;
+}
+
+.projectLink:hover > .projectName {
+    display:block;
+}
 
 .header {
     width: 100%;
