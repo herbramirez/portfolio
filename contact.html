@@ -16,7 +16,7 @@
     
     <div class="header">
         <div class="header-content">
-            <div class="logo col-span-2">
+            <div class="logo ">
             <a href="./main.html">Herb</a>
             </div>
             <nav class="breadcrumb">
@@ -34,15 +34,33 @@
   <div class="main-container">
     
      <div id="title">
-        <div class="titleContainer">
-        <h1>
-        Contact
-        </h1>
+        <h1>Contact</h1>
+        <div class="main-container">
+        
+        <form action="/contact.html"  class="form-container">
+            
+            <div class="form-content">
+            <label for="fname">Name</label><br>
+            <input type="text"><br>
+            </div>
+            
+            <div class="form-content">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" ><br><br>
+            </div>
+
+            <div class="form-content">
+            <label for="mMessage">Message</label><br>
+            <input type="text" id="message" value=""><br><br>
+            </div>
+            <input type="submit" value="Submit">
+          </form>
+        
+        </div>
         </div>
     </div>
 
-    <div class="overlay">
-    </div>
+   
   </div>
     
 
